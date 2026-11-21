@@ -1,0 +1,155 @@
+import type { Module, Adventure } from './types';
+
+export const MODULES: Module[] = [
+  {
+    id: 'scent-pocket',
+    name: 'Scent Pocket',
+    description: 'Hide treats or scent items and encourage natural searching. Dogs use their strongest sense to locate hidden rewards.',
+    interactionType: 'Nose Work',
+    difficulty: 'Easy',
+    icon: '👃',
+    color: '#a4c4a8',
+  },
+  {
+    id: 'tunnel',
+    name: 'Tunnel',
+    description: 'Adds movement and exploration to the trail. Dogs navigate through enclosed passages to reach the next challenge.',
+    interactionType: 'Physical Navigation',
+    difficulty: 'Easy',
+    icon: '🕳️',
+    color: '#7a9e7e',
+  },
+  {
+    id: 'sliding-gate',
+    name: 'Sliding Gate',
+    description: 'The dog must nudge or push the mechanism to reveal the next path. Builds problem-solving confidence.',
+    interactionType: 'Push & Slide',
+    difficulty: 'Medium',
+    icon: '🚪',
+    color: '#c8873e',
+  },
+  {
+    id: 'rotating-puzzle',
+    name: 'Rotating Puzzle',
+    description: 'Rotate the disc to align the opening with the reward. Requires patience and dexterity.',
+    interactionType: 'Rotate & Align',
+    difficulty: 'Hard',
+    icon: '🔄',
+    color: '#daa05d',
+  },
+  {
+    id: 'hidden-treasure',
+    name: 'Hidden Treasure',
+    description: 'A reward chamber that becomes the final destination. The satisfying conclusion to every adventure.',
+    interactionType: 'Discover & Reward',
+    difficulty: 'Easy',
+    icon: '💎',
+    color: '#f0d9b5',
+  },
+  {
+    id: 'branching-path',
+    name: 'Branching Path',
+    description: 'Create different routes through the trail. Adds decision-making and replay variety.',
+    interactionType: 'Choose & Navigate',
+    difficulty: 'Medium',
+    icon: '🔀',
+    color: '#d4e6d6',
+  },
+  {
+    id: 'paw-button',
+    name: 'Paw Button',
+    description: 'A pressure-activated mechanism the dog must step on or press to unlock the next section.',
+    interactionType: 'Press & Activate',
+    difficulty: 'Hard',
+    icon: '🐾',
+    color: '#c8873e',
+  },
+  {
+    id: 'final-treasure',
+    name: 'Final Treasure',
+    description: 'The grand finale chamber with a larger reward space. Every great adventure deserves a satisfying ending.',
+    interactionType: 'Grand Reward',
+    difficulty: 'Easy',
+    icon: '🏆',
+    color: '#daa05d',
+  },
+];
+
+export const ADVENTURES: Adventure[] = [
+  {
+    id: 'forest-quest',
+    name: 'Forest Quest',
+    modules: ['scent-pocket', 'tunnel', 'rotating-puzzle', 'hidden-treasure'],
+    description: 'A scent-driven journey through tunnels and puzzles. Perfect for curious noses.',
+    difficulty: 'Adventurer',
+    estimatedTime: '3–5 min',
+  },
+  {
+    id: 'mountain-mission',
+    name: 'Mountain Mission',
+    modules: ['sliding-gate', 'branching-path', 'paw-button', 'tunnel', 'hidden-treasure'],
+    description: 'A physical challenge with branching decisions. For dogs who love to move and solve.',
+    difficulty: 'Master',
+    estimatedTime: '5–8 min',
+  },
+  {
+    id: 'mystery-trail',
+    name: 'Mystery Trail',
+    modules: ['scent-pocket', 'sliding-gate', 'rotating-puzzle', 'branching-path', 'final-treasure'],
+    description: 'A multi-layered puzzle combining scent work and mechanical challenges.',
+    difficulty: 'Master',
+    estimatedTime: '6–10 min',
+  },
+];
+
+export const STARTER_KIT = {
+  id: 'starter-adventure-kit',
+  name: 'Treasure Trails — Starter Adventure Kit',
+  price: 2499,
+  imageSrc: '/images/hero-product.jpg',
+  description: 'Everything you need to create your dog\'s first trail. Includes a base trail, five core modules, and a setup guide to get started immediately.',
+  includes: [
+    '1 Base Trail Platform (Matte Cream ABS)',
+    '1 Scent Pocket Pod with Aroma Vents',
+    '1 Arched Exploration Tunnel',
+    '1 Linear Sliding Barrier Gate',
+    '1 Rotating Puzzle Disc with Amber Dial',
+    '1 Final Reward Lidded Chamber',
+    '1 Comprehensive 24-Trail Setup Blueprint',
+  ],
+  specs: {
+    dimensions: '60 × 40 × 15 cm (assembled)',
+    weight: '2.4 kg',
+    material: 'Food-contact-safe BPA-free ABS polymer, silicone, natural rubber',
+    suitableFor: 'Dogs 5–40 kg (All breeds & sizes)',
+    cleaningNote: 'Top-rack dishwasher-safe modules up to 65°C / 150°F.',
+    warranty: '1-year comprehensive replacement warranty',
+  },
+};
+
+export const PRODUCT_IMAGES = [
+  {
+    id: 'hero',
+    label: 'Studio Overview',
+    alt: 'Treasure Trails complete system assembled on natural oak flooring',
+    src: '/images/hero-product.jpg',
+  },
+  {
+    id: 'top',
+    label: 'All Modules Layup',
+    alt: 'Individual Treasure Trails modular components neatly arranged',
+    src: '/images/modules-flatlay.jpg',
+  },
+  {
+    id: 'config',
+    label: 'Assembled Adventure',
+    alt: 'Treasure Trails extended modular trail layout in living room',
+    src: '/images/trail-configured.jpg',
+  },
+  {
+    id: 'lifestyle-dog',
+    label: 'In Action (Retriever)',
+    alt: 'Golden Retriever exploring scent pocket module',
+    src: '/images/lifestyle-retriever.jpg',
+  },
+];

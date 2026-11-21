@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-bg: #FDF8F3;
+  --color-card-pink: #FFDFDF;
+  --color-card-mint: #D2F4E2;
+  --color-card-lavender: #EFE3FF;
+  --color-crimson: #CE1B3D;
+  --color-crimson-hover: #B51634;
+  --color-sticker-green: #00C371;
+  --color-dark-border: #1E1E1E;
+  --color-dark-text: #1E1E1E;
+  --color-footer-espresso: #230E10;
+
+  --font-display: 'Fraunces', 'Plus Jakarta Sans', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  background-color: #FDF8F3;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1E1E1E;
+  background-color: #FDF8F3;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Explicit font utilities */
+.font-display {
+  font-family: 'Fraunces', 'Plus Jakarta Sans', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom Neo-Brutalist Soft Shadows & Borders */
+.border-dark {
+  border: 2px solid #1E1E1E;
+}
+
+.shadow-pop {
+  box-shadow: 3px 3px 0px #1E1E1E;
+}
+
+.shadow-pop-lg {
+  box-shadow: 5px 5px 0px #1E1E1E;
+}
+
+.shadow-pop-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shadow-pop-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #1E1E1E;
+}
+
+.shadow-pop-hover:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #1E1E1E;
+}
+
+/* Canine Dichromatic Simulation Mode */
+.canine-vision-mode {
+  filter: url('#canine-dichromatic-filter');
+  transition: filter 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
